@@ -8,7 +8,7 @@ window.requestAnimFrame = ( function() {
 })();
 
 
-var canvas = document.getElementById( 'canvas' ),
+let canvas = document.getElementById( 'canvas' ),
 		ctx = canvas.getContext( '2d' ),
 
 		cw = window.innerWidth,
@@ -44,7 +44,7 @@ function random( min, max ) {
 
 
 function calculateDistance( p1x, p1y, p2x, p2y ) {
-	var xDistance = p1x - p2x,
+	let xDistance = p1x - p2x,
 			yDistance = p1y - p2y;
 	return Math.sqrt( Math.pow( xDistance, 2 ) + Math.pow( yDistance, 2 ) );
 }
@@ -96,7 +96,7 @@ Firework.prototype.update = function( index ) {
 	this.speed *= this.acceleration;
 	
 
-	var vx = Math.cos( this.angle ) * this.speed,
+	let vx = Math.cos( this.angle ) * this.speed,
 			vy = Math.sin( this.angle ) * this.speed;
 
 	this.distanceTraveled = calculateDistance( this.sx, this.sy, this.x + vx, this.y + vy );
@@ -186,7 +186,7 @@ Particle.prototype.draw = function() {
 
 function createParticles( x, y ) {
 
-	var particleCount = 30;
+	let particleCount = 30;
 	while( particleCount-- ) {
 		particles.push( new Particle( x, y ) );
 	}

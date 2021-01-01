@@ -1,6 +1,6 @@
 body {
     padding-top: 35px;  
-    background-color: rgb(23, 3, 59);
+    background-color: rgb(12, 2, 31);
    }
    
    .demo-1 {
@@ -54,5 +54,5 @@ body {
 
    canvas {
 	cursor: crosshair;
-	
+	display: block;
 }
